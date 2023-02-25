@@ -15,9 +15,9 @@ let guesscount = 1;
 function checkGuess(){
     const inputValue = Number(input.value);
     if (guesscount === 1){
-        preGuess.textContent = "Previos Guesses : "
+        preGuess.textContent = "Previos Guesses : ";
     }
-    const preInputValue = inputValue
+    input.value = "";
     // __game algo ____
     if (inputValue < 101 && inputValue > 0  ){
         if (inputValue === randomNumber){
