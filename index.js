@@ -18,6 +18,7 @@ function checkGuess(){
         preGuess.textContent = "Previos Guesses : "
     }
     input.value = ""
+    input.focus()
     // __game algo ____
     if (inputValue < 101 && inputValue > 0  ){
         if (inputValue === randomNumber){
@@ -62,12 +63,16 @@ function resetGame(){
     rightOrWrong.textContent = "";
     turnRem.textContent = "";
     turnRem.style.backgroundColor = "#007272"
-    input.value = ""
     rightOrWrong.style.backgroundColor = "#007272"
 }
 
 //____ event listeners_____________
 
+input.addEventListener("keydown" , (e)=>{
+    if(e.key === 'Enter'){
+        checkGuess()
+    }
+})
 submitBtn.addEventListener("click" ,checkGuess);
 NewGameBtn.addEventListener("click", resetGame);
 
