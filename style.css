@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #007272;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    color:white;
+}
+/* the hedding and info */
+#title {
+    font-size: 2rem;
+    margin-top: 15vh;
+    color:rgb(255, 97, 97);
+    border: 5px solid rgb(255, 97, 97);
+    padding: 10px 20px ;
+    border-radius: 40px;
+}
+#game-description{
+    font-size: 1.1rem;
+    padding: 0 15vw;
+    text-align: center;
+    margin-top: 20px;
+}
+/* ___ the game box */
+.gamebox{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 20px 0;
+    border: 3px white solid ;
+    padding: 10px 20px ;
+    border-radius: 5px;
+    min-width : 500px
+}
+.gamebox h2 {
+    font-size: 1.3rem;
+    color: rgb(233, 220, 220);
+}
+.gamebox input {
+    border-radius: 5px ;
+    width: 220px;
+    height: 20px;
+    border: 2px solid gray ;
+    text-align: center;
+    font-size: 1.1rem;
+}
+.gamebox button{
+    padding: 6px 11px 5px 10px ;
+    font-weight: 600;
+    font-size: 1rem;
+    color: white;
+    border: none ;
+    border-radius: 15px;
+    background-color: rgb(255, 97, 97);
+    margin-left:20px;
+    transition: 0.07s ease;
+    text-overflow: ellipsis;   
+}
+.gamebox button:hover{
+    transform: scale(0.97);
+}
+.gamebox button:active{
+    background-color: rgb(204, 76, 76);
+}
+
+/* ____satts bar _____*/
+.statsbox {
+    min-width: 500px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.statsbox p{
+    margin: 5px;
+    width: 500px;
+    text-align: center;
+    height: 25px;
+    padding-top: 6px;
+}
+.statsbox button{
+    padding: 10px 20px ;
+    border: none;
+    border-radius: 15px ;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(0, 173, 0);
+}
+
+/* footer */ 
+footer{
+    background-color: rgba(17, 17, 17, 0.904);
+    width: 350px;
+    min-height:30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0 10px;
+    position: fixed;
+    bottom: 0px;
+}
+footer h2{
+    font-size:0.9rem;
+    color: white;
+}
+footer h2 span{
+    font-size: 1rem;
+}
+footer a {
+    color: white;
+    margin-right: 10px;
+}
+
+@media (max-width : 750px){
+    .statsbox ,.gamebox {
+        width: fit-content;
+        height: fit-content;
+    }
+}
